@@ -9,7 +9,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.abmomen.android.mailvalidator.EmailValidator
 import com.abmomen.android.supermailclient.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val email = "abdulmomenict@gmail.com"
+
+        EmailValidator().isValid(email)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
