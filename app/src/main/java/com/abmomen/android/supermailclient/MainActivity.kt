@@ -23,7 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         val email = "abdulmomenict@gmail.com"
 
-        EmailValidator().isValid(email)
+        if (EmailValidator().isValid(email)) {
+            println("Valid Mail")
+        } else {
+            println("Invalid Mail")
+        }
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
